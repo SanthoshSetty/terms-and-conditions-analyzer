@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Terms & Conditions Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4a90e2;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 100px;
+        }
+        .summary {
+            background-color: #e9f7fe;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid #dce4ef;
+        }
+        button {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #357ab7;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Terms & Conditions Analyzer</h1>
+    <img src="https://img.icons8.com/clouds/100/000000/law.png" alt="Legal icon">
+    <form action="/" method="post" enctype="multipart/form-data">
+        <textarea name="text" rows="10" cols="50" placeholder="Paste the text of the terms & conditions here"></textarea><br>
+        <p>OR</p>
+        <input type="file" name="file"><br><br>
+        <button type="submit">Analyze</button>
+    </form>
+    {% if summary %}
+    <div class="summary">
+        <h3>Summary:</h3>
+        <p>{{ summary }}</p>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
